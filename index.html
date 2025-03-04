@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WooTracts - Universidad Mariano Gálvez de Guatemala</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>WooTracts</h1>
+    <h2>Universidad Mariano Gálvez de Guatemala</h2>
+    <div id="logo">
+        <!-- Espacio para la imagen -->
+        <img src="https://logotipoz.com/wp-content/uploads/2022/11/mariano-galves-sin-fondo-1.webp" alt="Logo de la universidad" id="university-logo">
+    </div>
+</header>
+
+<main>
+    <section id="certificate-form">
+        <h3>Registrar Certificado</h3>
+        <form id="register-form">
+            <label for="student-name">Nombre del Estudiante:</label>
+            <input type="text" id="student-name" required>
+
+            <label for="course">Curso Aprobado:</label>
+            <input type="text" id="course" required>
+
+            <label for="grade">Calificación:</label>
+            <input type="number" id="grade" min="0" max="100" required>
+
+            <button type="submit">Registrar Certificado</button>
+        </form>
+    </section>
+
+    <section id="certificate-history">
+        <h3>Historial de Certificados</h3>
+        <ul id="certificate-list"></ul>
+    </section>
+</main>
+
+<script type="module" src="main.js"></script>
+</body>
+</html>
