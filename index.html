@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WooTracts - Universidad Mariano Gálvez de Guatemala</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 <header>
-    <h1>WooTracts</h1>
+    <h1>WooTracts <i class="fas fa-file-contract"></i></h1>
     <h2>Universidad Mariano Gálvez de Guatemala</h2>
     <div id="logo">
-        <!-- Espacio para la imagen -->
         <img src="https://logotipoz.com/wp-content/uploads/2022/11/mariano-galves-sin-fondo-1.webp" alt="Logo de la universidad" id="university-logo">
     </div>
 </header>
@@ -31,6 +32,18 @@
 
             <button type="submit">Registrar Certificado</button>
         </form>
+        <!-- Barra de progreso -->
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+        <!-- Mensaje de confirmación -->
+        <div id="confirmation-message">
+            <i class="fas fa-check-circle"></i> Transacción confirmada: Certificado registrado en la blockchain.
+        </div>
+        <!-- Anuncio de certificado enviado -->
+        <div id="certificate-sent-message">
+            <i class="fas fa-paper-plane"></i> Certificado enviado al alumno. Hash: <span id="certificate-hash"></span>
+        </div>
     </section>
 
     <section id="certificate-history">
@@ -38,6 +51,54 @@
         <ul id="certificate-list"></ul>
     </section>
 </main>
+
+<!-- Ventana emergente del certificado -->
+<div id="certificate-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Certificado de Curso Aprobado</h2>
+        <p><strong>Estudiante:</strong> <span id="modal-student-name"></span></p>
+        <p><strong>Carnet:</strong> <span id="modal-carnet"></span></p>
+        <p><strong>Curso:</strong> <span id="modal-course"></span></p>
+        <p><strong>Calificación:</strong> <span id="modal-grade"></span></p>
+        <p><strong>Fecha:</strong> <span id="modal-date"></span></p>
+        <p><strong>Hash:</strong> <span id="modal-hash"></span></p>
+        <button id="print-certificate">Imprimir Certificado</button>
+        <button id="view-blockchain">Ver Cadena de Bloques</button>
+    </div>
+</div>
+
+<!-- Ventana emergente de la cadena de bloques -->
+<div id="blockchain-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Cadena de Bloques</h2>
+        <div id="blockchain-blocks"></div>
+    </div>
+</div>
+
+<!-- Plantilla de certificado para imprimir -->
+<div id="printable-certificate" class="printable">
+    <div class="certificate-header">
+        <img src="https://logotipoz.com/wp-content/uploads/2022/11/mariano-galves-sin-fondo-1.webp" alt="Logo de la universidad">
+        <h1>Universidad Mariano Gálvez de Guatemala</h1>
+        <h2>Certificado de Curso Aprobado</h2>
+    </div>
+    <div class="certificate-body">
+        <p>Se otorga el presente certificado a:</p>
+        <h3 id="print-student-name"></h3>
+        <p>Por haber aprobado el curso:</p>
+        <h4 id="print-course"></h4>
+        <p>Con una calificación de:</p>
+        <h4 id="print-grade"></h4>
+        <p>Fecha de emisión: <span id="print-date"></span></p>
+        <p>Carnet: <span id="print-carnet"></span></p>
+        <p>Hash de verificación: <span id="print-hash"></span></p>
+    </div>
+    <div class="certificate-footer">
+        <p>Este certificado es válido y ha sido registrado en la blockchain.</p>
+    </div>
+</div>
 
 <script type="module" src="main.js"></script>
 </body>

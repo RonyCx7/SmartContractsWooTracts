@@ -6,19 +6,24 @@ class LinkedList {
         this.counter = 1; // Contador para ID autoincremental
     }
 
-    // Generar un ID aleatorio de 4 dígitos
-    generateRandomId() {
-        return Math.floor(1000 + Math.random() * 9000); // Número entre 1000 y 9999
+    // Generar un hash simulado de 8 caracteres
+    generateHash() {
+        const characters = '0123456789abcdef'; // Caracteres permitidos en el hash
+        let hash = '';
+        for (let i = 0; i < 8; i++) {
+            hash += characters[Math.floor(Math.random() * characters.length)];
+        }
+        return hash;
     }
 
     // Agregar una nueva transacción al final de la lista
     addTransaction(data) {
         const autoIncrementId = String(this.counter).padStart(4, '0'); // ID autoincremental
-        const randomId = this.generateRandomId(); // ID aleatorio
+        const hash = this.generateHash(); // Hash simulado
 
         const transactionData = {
             id: autoIncrementId,
-            randomId,
+            hash, // Usamos el hash en lugar del randomId
             ...data
         };
 

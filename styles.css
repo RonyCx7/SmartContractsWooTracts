@@ -83,3 +83,303 @@ form button:hover {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+/* Estilos para la barra de progreso */
+#progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    display: none; /* Ocultar inicialmente */
+}
+
+#progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: #004080;
+    border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+
+/* Estilos para el mensaje de confirmación */
+#confirmation-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    display: none; /* Ocultar inicialmente */
+}
+
+#confirmation-message i {
+    margin-right: 10px;
+    color: #28a745;
+}
+
+/* Estilos para los íconos */
+.fa-file-contract {
+    margin-left: 10px;
+    color: #004080;
+}
+
+/* Estilos para los certificados */
+#certificate-list li {
+    position: relative;
+    padding-left: 30px;
+}
+
+#certificate-list li::before {
+    content: "\f1c0"; /* Ícono de bloque de FontAwesome */
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #004080;
+}
+/* Estilos para la ventana emergente (modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el anuncio de certificado enviado */
+#certificate-sent-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    border-radius: 5px;
+    display: none;
+}
+
+#certificate-sent-message i {
+    margin-right: 10px;
+    color: #0c5460;
+}
+/* Estilos para la ventana emergente (modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el anuncio de certificado enviado */
+#certificate-sent-message {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    border-radius: 5px;
+    display: none;
+}
+
+#certificate-sent-message i {
+    margin-right: 10px;
+    color: #0c5460;
+}
+
+/* Estilos para la plantilla de certificado imprimible */
+.printable {
+    display: none; /* Ocultar en la vista normal */
+}
+
+@media print {
+    body * {
+        visibility: hidden; /* Ocultar todo excepto el certificado */
+    }
+    .printable, .printable * {
+        visibility: visible; /* Mostrar solo el certificado */
+    }
+    .printable {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 2px solid #004080;
+        border-radius: 10px;
+        background-color: white;
+    }
+    .certificate-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .certificate-header img {
+        width: 100px;
+        height: auto;
+    }
+    .certificate-body {
+        text-align: center;
+        margin: 20px 0;
+    }
+    .certificate-body h3, .certificate-body h4 {
+        margin: 10px 0;
+    }
+    .certificate-footer {
+        text-align: center;
+        margin-top: 20px;
+        font-style: italic;
+    }
+}
+/* Estilos para el botón de imprimir */
+#print-certificate {
+    background-color: #b10000; /* Fondo rojo */
+    color: white; /* Letra blanca */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#print-certificate:hover {
+    background-color: #cc0000; /* Fondo rojo oscuro al pasar el cursor */
+}
+/* Estilos para la ventana emergente (modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de imprimir */
+#print-certificate {
+    background-color: #ff0000; /* Fondo rojo */
+    color: white; /* Letra blanca */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Estilos para el botón de ver cadena de bloques */
+#view-blockchain {
+    background-color: #004080; /* Fondo azul */
+    color: white; /* Letra blanca */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#print-certificate:hover {
+    background-color: #cc0000; /* Fondo rojo oscuro al pasar el cursor */
+}
+
+/* Estilos para la cadena de bloques */
+#blockchain-blocks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-height: 400px; /* Altura máxima para la lista */
+    overflow-y: auto; /* Barra deslizadora vertical */
+    padding: 10px;
+    width: 100%;
+}
+
+.block {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 80%;
+    max-width: 400px;
+    text-align: left;
+}
+
+.block h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #004080;
+}
+
+.block p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.block .arrow {
+    text-align: center;
+    font-size: 20px;
+    color: #004080;
+    margin: 10px 0;
+}
