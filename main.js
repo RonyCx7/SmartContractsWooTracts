@@ -53,7 +53,7 @@ const courses = [
 function generateCarnet() {
     const year = Math.floor(Math.random() * (25 - 14 + 1)) + 14; // Años 2014-2025
     const number = Math.floor(Math.random() * 20000); // Número de 5 dígitos
-    return `0905-${year}${String(number).padStart(5, '0')}`;
+    return `0905-${year}-${String(number).padStart(5, '0')}`;
 }
 
 // Función para cargar datos históricos

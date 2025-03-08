@@ -23,7 +23,7 @@ class LinkedList {
 
         const transactionData = {
             id: autoIncrementId,
-            hash, // Usamos el hash en lugar del randomId
+            hash,
             ...data
         };
 
@@ -38,7 +38,7 @@ class LinkedList {
             current.next = newNode;
         }
 
-        this.counter++; // Incrementar el contador
+        this.counter++;
     }
 }
 
